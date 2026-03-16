@@ -1,0 +1,239 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto' , sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 16px;
+    line-height: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+nav ul a:visited {
+    color: inherit;
+}
+
+nav ul a:hover {
+    color: #007bff; 
+    opacity: 0.7;
+}
+
+#about .container {
+    display: flex ;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+#description {
+    line-height: 1.6;      
+    color: #b0b0b0;           
+    max-width: 50%;      
+    margin: 20px 0;       
+    font-size: 1.1rem;     
+}
+
+#hero-image {
+    width: 200px;           
+    height: 200px;          
+    border-radius: 50%;     
+    object-fit: cover;      
+    border: 3px solid #555;
+    transition: all 0.3s ease;
+}
+
+#hero-image:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+#skills .container {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+#skills ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.list-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.list-skills i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.list-skills li {
+    background: #2a2a2a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.list-skills li:hover {
+    background: #3a3a3a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#education .container {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #2a2a2a;
+}
+
+table, th, td {
+    border: 1px solid #444;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    color: #e0e0e0;
+}
+
+tbody tr {
+    background-color: #333;
+}
+
+tbody tr:hover {
+    background-color: #444;
+    transition: background-color 0.3s ease;
+}
+
+#contact .container {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+#contact ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    background: #2a2a2a;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#contact ul li:hover {
+    background: #3a3a3a;
+    border-color: #007bff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+#contact ul a {
+    text-decoration: none;
+    font-size: large;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#contact ul a:hover {
+    color: #ffffff;
+}
+
+#contact ul a:visited {
+    color: inherit;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+#contact ul li i {
+    margin-right: 8px;
+}
+
+
+#contact i {
+    font-size: 1.2rem;
+}
