@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
+        body { font-family: 'Geist', sans-serif; -webkit-font-smoothing: antialiased; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: #000; transition: width 0.2s ease; }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-white text-[#1a1a1a] selection:bg-slate-200">
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-14 flex justify-between items-center text-sm">
+            <a href="index.html" class="font-semibold tracking-tight uppercase">HORIZON.</a>
+            <div class="hidden md:flex gap-6 text-slate-500">
+                <a href="index.html" class="nav-link text-black font-medium">Accueil</a>
+                <a href="about.html" class="nav-link hover:text-black transition">À propos</a>
+                <a href="services.html" class="nav-link hover:text-black transition">Services</a>
+                <a href="gallery.html" class="nav-link hover:text-black transition">Projets</a>
+                <a href="contact.html" class="nav-link hover:text-black transition font-semibold text-black">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-32 max-w-5xl mx-auto px-6">
+        <div class="max-w-2xl mb-24">
+            <h1 class="text-5xl font-semibold tracking-tight mb-8 leading-[1.1]">Vers une nouvelle clarté numérique.</h1>
+            <p class="text-xl text-slate-500 mb-10 leading-relaxed">
+                Horizon conçoit des architectures logicielles et des expériences utilisateurs où la complexité s'efface devant l'évidence.
+            </p>
+            <div class="flex gap-4">
+                <a href="services.html" class="bg-black text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-slate-800 transition">Explorer l'expertise</a>
+                <a href="contact.html" class="bg-white border border-slate-200 px-5 py-2.5 rounded-md text-sm font-medium hover:bg-slate-50 transition">Démarrer un projet</a>
+            </div>
+        </div>
+
+        <div class="mb-24 rounded-lg overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1600" alt="Horizon Clean Workspace" class="w-full h-[500px] object-cover grayscale brightness-105 contrast-105">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-slate-100 pt-16">
+            <div class="space-y-2">
+                <p class="text-sm italic text-slate-600">"La précision n'est pas une option chez Horizon, c'est le fondement."</p>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Vision 2026</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-sm italic text-slate-600">"Chaque ligne de code est une brique vers un avenir plus simple."</p>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Engineering</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-sm italic text-slate-600">"Une esthétique qui dure au-delà des tendances éphémères."</p>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Design Ethics</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-100 py-12 bg-slate-50/30 text-[10px] text-slate-400 uppercase tracking-widest">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <span>&copy; 2026 Horizon.</span>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-black">LinkedIn</a>
+                <a href="#" class="hover:text-black">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
