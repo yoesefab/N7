@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N7 - yoesefab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --notion-bg: #ffffff;
+            --notion-text: #37352f;
+            --notion-border: #e9e9e7;
+            --shadcn-muted: #f4f4f5;
+            --shadcn-primary: #18181b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--notion-bg);
+            color: var(--notion-text);
+            line-height: 1.5;
+        }
+
+        .card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--notion-border);
+        }
+
+        .card:hover {
+            border-color: #d1d1d1;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--shadcn-primary);
+            color: white;
+            transition: opacity 0.2s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--notion-border);
+            background: white;
+            color: var(--notion-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--shadcn-muted);
+        }
+
+        .homework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="p-6 md:p-12 lg:p-20 max-w-7xl mx-auto">
+    <header class="mb-12 border-b border-gray-100 pb-8">
+        <div class="flex items-center gap-3 mb-2"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crisis Negotiation & Diplomacy Bureau</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+/* CSS UNCHANGED AS PER INSTRUCTIONS */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#02060f}
+#c{display:block;position:fixed;inset:0;z-index:0}
+#ui{position:fixed;inset:0;z-index:10;pointer-events:none}
+#topbar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:18px 32px;background:linear-gradient(180deg,rgba(2,6,15,.9) 0%,transparent 100%)}
+#bureau-logo{font-family:'Cinzel',serif;font-size:.85em;letter-spacing:.22em;color:#c9a050;text-transform:uppercase;font-weight:600}
+#slide-info{font-family:'Cinzel',serif;font-size:.65em;letter-spacing:.18em;color:rgba(201,160,80,.45)}
+#panel{position:absolute;right:0;top:0;bottom:0;width:360px;background:linear-gradient(270deg,rgba(2,6,15,.97) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:center;padding:80px 30px 80px 55px;opacity:0;transition:opacity .5s;pointer-events:all;overflow-y:auto}
+#panel.show{opacity:1}
+#panel h2{font-family:'Cinzel',serif;font-size:1.5em;font-weight:700;color:#c9a050;letter-spacing:.08em;line-height:1.15;margin-bottom:6px}
+#panel .role{font-family:'Cinzel',serif;font-size:.55em;letter-spacing:.2em;color:#4a9f7a;border:1px solid rgba(74,159,122,.4);display:inline-block;padding:3px 10px;margin-bottom:18px;text-transform:uppercase}
+#panel .bar{width:36px;height:2px;background:#c9a050;margin-bottom:18px}
+#panel p{font-family:'Crimson Pro',serif;font-size:.95em;line-height:1.75;color:rgba(230,215,185,.82);font-weight:300;margin-bottom:14px}
+#panel .pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+#panel .pill{font-family:'Crimson Pro',serif;font-size:.75em;background:rgba(74,120,165,.15);border:1px solid rgba(74,120,165,.4);color:#88bdd8;padding:3px 10px;border-radius:20px}
+#panel .label{font-family:'Cinzel',serif;font-size:.5em;letter-spacing:.18em;color:rgba(201,160,80,.6);text-transform:uppercase;margin-bottom:6px;display:block}
+#bottom{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:0;padding:0 32px 26px;background:linear-gradient(0deg,rgba(2,6,15,.85) 0%,transparent 100%);pointer-events:all}
+#dots{display:flex;gap:8px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(201,160,80,.2);border:1px solid rgba(201,160,80,.35);cursor:pointer;transition:all .3s}
+.dot.on{background:#c9a050;box-shadow:0 0 8px rgba(201,160,80,.7);transform:scale(1.4)}
+#arrows{position:absolute;bottom:20px;right:32px;display:flex;gap:8px;pointer-events:all}
+.arr-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(201,160,80,.35);background:rgba(2,6,15,.7);color:#c9a050;font-size:1em;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+#members{position:absolute;left:0;top:0;bottom:0;width:220px;background:linear-gradient(90deg,rgba(2,6,15,.95) 60%,transparent 100%);display:flex;flex-direction:column;justify-content:center;padding:80px 36px 80px 18px;opacity:0;transition:opacity .5s;pointer-events:all}
+#members.show{opacity:1}
+#members h3{font-family:'Cinzel',serif;font-size:.6em;letter-spacing:.2em;color:rgba(201,160,80,.5);text-transform:uppercase;margin-bottom:14px}
+.mbtn{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:4px;cursor:pointer;transition:all .2s;margin-bottom:3px;border:1px solid transparent}
+.mbtn .mname{font-family:'Cinzel',serif;font-size:.6em;color:#c9a050;letter-spacing:.07em;text-transform:uppercase}
+#title-over{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;transition:opacity .6s}
+#title-over h1{font-family:'Cinzel',serif;font-size:3em;font-weight:700;color:#c9a050;letter-spacing:.1em;line-height:1.1;text-shadow:0 0 60px rgba(201,160,80,.35)}
+#tip{position:fixed;background:rgba(2,6,15,.92);border:1px solid rgba(201,160,80,.45);border-radius:5px;padding:7px 14px;font-family:'Cinzel',serif;font-size:.65em;color:#c9a050;pointer-events:none;display:none;z-index:50}
+.wtable{width:100%;border-collapse:collapse;margin-top:8px;font-family:'Crimson Pro',serif}
+.wtable th{font-family:'Cinzel',serif;font-size:.5em;letter-spacing:.12em;color:#c9a050;padding:5px 6px;border-bottom:1px solid rgba(201,160,80,.25);text-align:left}
+.wtable td{padding:6px 6px;font-size:.78em;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(230,215,185,.8)}
+.hcard{border-radius:6px;padding:14px;margin-bottom:10px}
+.hy{background:rgba(74,154,122,.07);border:1px solid rgba(74,154,122,.3)}
+.hn{background:rgba(224,112,112,.07);border:1px solid rgba(224,112,112,.3)}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.vcard{background:rgba(201,160,80,.06);border:1px solid rgba(201,160,80,.18);border-radius:6px;padding:12px;text-align:center}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="ui">
+  <div id="topbar">
+    <div id="bureau-logo">Crisis Negotiation &amp; Diplomacy Bureau</div>
+    <div id="slide-info">01 / 15</div>
+  </div>
+  <div id="title-over">
+    <h1>Crisis Negotiation<br>&amp; Diplomacy<br>Bureau</h1>
+    <div class="sub">Specialist Animal Task Force</div>
+    <div class="tag">"De-escalate · Negotiate · Resolve"</div>
+  </div>
+  <div id="members"><h3>The Team</h3><div id="mlist"></div></div>
+  <div id="panel"><div id="pcontent"></div></div>
+  <div id="tip"></div>
+  <div id="bottom"><div id="dots"></div></div>
+  <div id="arrows">
+    <button class="arr-btn" id="bprev">&#8592;</button>
+    <button class="arr-btn" id="bnext">&#8594;</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ═══════════════════════════════════════════════
+// TEAM DATA (Enhanced with PBR Specs)
+// ═══════════════════════════════════════════════
+const TEAM=[
+  {id:'dolphin',emoji:'🐬',name:'Dolphin',role:'Lead Negotiator', col:0x1a8fbf, rough:0.05, metal:0.2,
+   strengths:['Advanced communication','Emotional intelligence','Social bonding'],
+   mission:'Leads all hostage negotiations. Reads emotional cues in real time, builds trust with opposing parties.',
+   why:'Dolphins use complex communication and empathy — essential for crisis de-escalation.'},
+  {id:'owl',emoji:'🦉',name:'Owl',role:'Intelligence Analyst', col:0x8a6030, rough:0.8, metal:0,
+   strengths:['Silent observation','Night vision','Exceptional hearing'],
+   mission:'Gathers intelligence without alerting suspects. Monitors from concealed positions.',
+   why:'Owls are built for quiet, accurate observation — the backbone of successful response.'},
+  {id:'elephant',emoji:'🐘',name:'Elephant',role:'Operations Coordinator', col:0x708090, rough:0.9, metal:0,
+   strengths:['Exceptional memory','Empathy','Stability under chaos'],
+   mission:'Tracks long-term strategy and past case patterns. Guides ethical decisions.',
+   why:'Elephants never forget — pattern recognition saves lives in the field.'},
+  {id:'crow',emoji:'🐦',name:'Crow',role:'Problem Solver', col:0x0a0a14, rough:0.1, metal:0.6,
+   strengths:['High intelligence','Tool use','Creative improvisation'],
+   mission:'Solves unexpected crises in real time. Designs creative solutions.',
+   why:'Crows are multi-step tool-users — among the smartest animals on Earth.'},
+  {id:'octopus',emoji:'🐙',name:'Octopus',role:'Infiltration Specialist', col:0x7a1a60, rough:0.2, metal:0.1,
+   strengths:['Camouflage mastery','Extreme flexibility','8-arm multitasking'],
+   mission:'Handles all stealth operations — infiltrating tight spaces, executing high-risk rescues.',
+   why:'No animal matches the octopus for disguise and adaptability.'},
+  {id:'eagle',emoji:'🦅',name:'Eagle',role:'Surveillance Leader', col:0xb07020, rough:0.6, metal:0,
+   strengths:['Long-distance vision','Aerial speed','360° field of view'],
+   mission:'Monitors from above, providing real-time aerial intelligence.',
+   why:'Eagles see 5× farther than humans — the ultimate early-warning system.'},
+  {id:'bee',emoji:'🐝',name:'Honeybee',role:'Logistics Coordinator', col:0xd4a020, rough:0.4, metal:0.1,
+   strengths:['Precision teamwork','Waggle-dance comms','Operational efficiency'],
+   mission:'Manages communication systems and coordinates resources.',
+   why:'Honeybees run nature\'s most efficient organizations.'},
+];
+
+const SLIDES=[{t:'title'},{t:'team'},...TEAM.map((_,i)=>({t:'animal',i})),{t:'hiring'},{t:'workspace'},{t:'weaknesses'},{t:'future'},{t:'conclusion'}];
+
+let slide=0,scene,cam,renderer,clock;
+let animals=[],building,particles,skybox,nebulaLayers=[],shootingStars=[];
+let raycaster=new THREE.Raycaster(),mouse=new THREE.Vector2(),hovered=null;
+let camTarget={x:0,y:1,z:22},camLook={x:0,y:0,z:0};
+
+// ═══════════════════════════════════════════════
+// ASSET CREATION HELPERS
+// ═══════════════════════════════════════════════
+function createEye(grp, x, y, z, size=0.1) {
+  const eye = new THREE.Group();
+  // Glassy outer
+  const iris = new THREE.Mesh(new THREE.SphereGeometry(size, 16, 16), new THREE.MeshStandardMaterial({color: 0x111111, roughness: 0.05, metalness: 0.5}));
+  // Pupil
+  const pupil = new THREE.Mesh(new THREE.SphereGeometry(size*0.6, 8, 8), new THREE.MeshBasicMaterial({color: 0x000000}));
+  pupil.position.z = size * 0.5;
+  // Specular Highlight
+  const light = new THREE.Mesh(new THREE.SphereGeometry(size*0.2, 8, 8), new THREE.MeshBasicMaterial({color: 0xffffff}));
+  light.position.set(size*0.4, size*0.4, size*0.7);
+  eye.add(iris, pupil, light);
+  eye.position.set(x,y,z);
+  grp.add(eye);
+}
+
+// ═══════════════════════════════════════════════
+// CORE INITIALIZATION
+// ═══════════════════════════════════════════════
+function init(){
+  renderer=new THREE.WebGLRenderer({canvas:document.getElementById('c'),antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(innerWidth,innerHeight);
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.shadowMap.enabled = true;
+
+  scene=new THREE.Scene();
+  scene.fog=new THREE.FogExp2(0x02060f,.02);
+  cam=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,400);
+  clock=new THREE.Clock();
+
+  addLights();
+  makeSkybox();
+  makeParticles();
+  makeBuilding();
+  makeAnimals();
+
+  addEventListener('resize',onResize);
+  document.getElementById('c').addEventListener('mousemove',onMove);
+  document.getElementById('c').addEventListener('click',onClick);
+  loop();
+}
+
+function addLights(){
+  scene.add(new THREE.AmbientLight(0x1a2a40, 0.8));
+  
+  const sun=new THREE.DirectionalLight(0xfff0d0, 1.8);
+  sun.position.set(20, 30, 10);
+  scene.add(sun);
+
+  // NEW: Amber Rim Light for "halo" edge
+  const rim = new THREE.DirectionalLight(0xffb060, 2.5);
+  rim.position.set(-20, 10, -15);
+  scene.add(rim);
+
+  const fill = new THREE.PointLight(0x4060a0, 1, 50);
+  fill.position.set(-10, -5, 10);
+  scene.add(fill);
+}
+
+// ═══════════════════════════════════════════════
+// ANIMAL FACTORY (High Fidelity Versions)
+// ═══════════════════════════════════════════════
+
+function makeAnimals(){
+  const positions=[[0,0],[-9,2],[9,2],[-6,-3],[6,-3],[0,6],[0,-6]];
+  
+  TEAM.forEach((m,i)=>{
+    const grp=new THREE.Group();
+    const [px,pz]=positions[i];
+    grp.position.set(px,0,pz);
+    grp.userData={isAnimal:true,idx:i,phase:Math.random()*Math.PI*2, baseY:0};
+
+    // Upgraded Materials
+    const mat = new THREE.MeshStandardMaterial({
+      color: m.col, 
+      roughness: m.rough, 
+      metalness: m.metal,
+      emissive: m.col,
+      emissiveIntensity: 0.1
+    });
+
+    switch(m.id){
+      case 'dolphin': buildDolphin(grp, mat); break;
+      case 'owl': buildOwl(grp, mat); break;
+      case 'elephant': buildElephant(grp, mat); break;
+      case 'crow': buildCrow(grp, mat); break;
+      case 'octopus': buildOctopus(grp, mat); break;
+      case 'eagle': buildEagle(grp, mat); break;
+      case 'bee': buildBee(grp, mat); break;
+    }
+
+    // Platform Glow Upgrade
+    const plat = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.7, 0.2, 32), new THREE.MeshStandardMaterial({color: 0x050a15, emissive: m.col, emissiveIntensity: 0.3}));
+    plat.position.y = -1.5;
+    grp.add(plat);
+
+    // Godray Cone
+    const coneGeo = new THREE.ConeGeometry(1.5, 8, 32, 1, true);
+    const coneMat = new THREE.MeshBasicMaterial({color: m.col, transparent: true, opacity: 0.1, side: THREE.DoubleSide, blending: THREE.AdditiveBlending});
+    const ray = new THREE.Mesh(coneGeo, coneMat);
+    ray.position.y = -5.5; ray.rotation.x = Math.PI;
+    grp.add(ray);
+
+    scene.add(grp);
+    animals.push(grp);
+  });
+}
+
+function buildDolphin(g, mat){
+  // Lathe body for melon bulge
+  const pts = [new THREE.Vector2(0,0), new THREE.Vector2(0.2, 0.2), new THREE.Vector2(0.6, 1), new THREE.Vector2(0.8, 2), new THREE.Vector2(0.5, 3.5), new THREE.Vector2(0.1, 4.2)];
+  const body = new THREE.Mesh(new THREE.LatheGeometry(pts, 32), mat);
+  body.rotation.z = Math.PI/2; body.position.x = -1.5;
+  g.add(body);
+  // Melon & Snout
+  const melon = new THREE.Mesh(new THREE.SphereGeometry(0.5, 32, 16), mat);
+  melon.position.set(1.5, 0.3, 0); melon.scale.set(1.1, 0.9, 0.8); g.add(melon);
+  const beak = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.2, 0.8, 16), mat);
+  beak.rotation.z = -Math.PI/2; beak.position.set(2.2, 0.1, 0); g.add(beak);
+  // Horizontal Flukes
+  const flukes = new THREE.Mesh(new THREE.SphereGeometry(0.5, 16, 8), mat);
+  flukes.scale.set(1, 0.1, 2.5); flukes.position.set(-1.8, 0, 0); g.add(flukes);
+  createEye(g, 1.7, 0.4, 0.3, 0.08); createEye(g, 1.7, 0.4, -0.3, 0.08);
+}
+
+function buildOwl(g, mat){
+  const body = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 3), mat);
+  body.scale.set(0.9, 1.2, 0.8); g.add(body);
+  const headGrp = new THREE.Group();
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.75, 32, 32), mat);
+  headGrp.add(head);
+  const face = new THREE.Mesh(new THREE.CircleGeometry(0.6, 32), new THREE.MeshStandardMaterial({color: 0xecdcb0, roughness:0.5}));
+  face.position.z = 0.55; headGrp.add(face);
+  createEye(headGrp, 0.25, 0.1, 0.5, 0.15); createEye(headGrp, -0.25, 0.1, 0.5, 0.15);
+  headGrp.position.y = 1.4; g.add(headGrp); g.userData.head = headGrp;
+}
+
+function buildElephant(g, mat){
+  const body = new THREE.Mesh(new THREE.SphereGeometry(1.2, 32, 32), mat);
+  body.scale.set(1.3, 1, 1.1); g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.85, 32, 32), mat);
+  head.position.set(1.2, 0.4, 0); g.add(head);
+  // Tube Trunk
+  const curve = new THREE.CatmullRomCurve3([new THREE.Vector3(1.9, 0.2, 0), new THREE.Vector3(2.5, -0.2, 0), new THREE.Vector3(2.2, -1.2, 0.5)]);
+  const trunk = new THREE.Mesh(new THREE.TubeGeometry(curve, 24, 0.22, 12, false), mat);
+  g.add(trunk);
+  // Curved Tusks
+  const t1 = new THREE.Mesh(new THREE.TorusGeometry(0.5, 0.05, 8, 20, Math.PI*0.5), new THREE.MeshStandardMaterial({color:0xf5f0e0}));
+  t1.position.set(1.8, -0.1, 0.4); t1.rotation.y = Math.PI*0.3; g.add(t1);
+}
+
+function buildCrow(g, mat){
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.7, 32, 32), mat);
+  body.scale.set(1.6, 0.8, 0.9); g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.45, 32, 32), mat);
+  head.position.set(0.95, 0.4, 0); g.add(head); g.userData.head = head;
+  const beak = new THREE.Mesh(new THREE.ConeGeometry(0.12, 0.6, 16), new THREE.MeshStandardMaterial({color: 0x0a0a0a, metalness:0.8, roughness:0.1}));
+  beak.rotation.z = -Math.PI/2; beak.position.set(1.5, 0.35, 0); g.add(beak);
+  createEye(g, 1.2, 0.55, 0.25, 0.06); createEye(g, 1.2, 0.55, -0.25, 0.06);
+}
+
+function buildOctopus(g, mat){
+  const mantle = new THREE.Mesh(new THREE.SphereGeometry(0.9, 32, 32), mat);
+  mantle.scale.set(0.8, 1.3, 0.8); mantle.position.y = 0.8; g.add(mantle);
+  g.userData.tentacles = [];
+  for(let i=0; i<8; i++){
+    const ang = (i/8)*Math.PI*2;
+    const pts = [];
+    for(let j=0; j<6; j++) pts.push(new THREE.Vector3(Math.cos(ang)*(0.6 + j*0.5), -j*0.3, Math.sin(ang)*(0.6 + j*0.5)));
+    const curve = new THREE.CatmullRomCurve3(pts);
+    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 20, 0.18, 12, false), mat);
+    g.add(tube);
+    g.userData.tentacles.push({mesh: tube, curve: curve, ang: ang});
+  }
+}
+
+function buildEagle(g, mat){
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.75, 32, 32), mat);
+  g.add(body);
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.5, 32, 32), new THREE.MeshStandardMaterial({color: 0xffffff, roughness:0.4}));
+  head.position.set(0.7, 0.7, 0); g.add(head);
+  // Tapered Wings
+  const wingShape = new THREE.Shape();
+  wingShape.moveTo(0,0); wingShape.quadraticCurveTo(1.5, 1.5, 4, 0); wingShape.quadraticCurveTo(1.5, -0.5, 0, 0);
+  const wingGeo = new THREE.ShapeGeometry(wingShape);
+  const w1 = new THREE.Mesh(wingGeo, mat); w1.rotation.x = -Math.PI/2; w1.position.z = 0.2; g.add(w1);
+  const w2 = w1.clone(); w2.rotation.x = Math.PI/2; w2.position.z = -0.2; g.add(w2);
+  g.userData.wings = [w1, w2];
+}
+
+function buildBee(g, mat){
+  const abd = new THREE.Mesh(new THREE.SphereGeometry(0.7, 32, 32), mat);
+  abd.scale.set(1.4, 1, 1); g.add(abd);
+  // Stripes
+  for(let i=0; i<3; i++){
+    const stripe = new THREE.Mesh(new THREE.TorusGeometry(0.7, 0.08, 16, 32), new THREE.MeshStandardMaterial({color:0x000000, roughness:0.8}));
+    stripe.rotation.y = Math.PI/2; stripe.position.x = (i-1)*0.4; g.add(stripe);
+  }
+  const wingMat = new THREE.MeshStandardMaterial({color: 0xddeeff, transparent: true, opacity: 0.35, roughness: 0, metalness: 0.3});
+  const wingGeo = new THREE.SphereGeometry(0.6, 16, 16); wingGeo.scale(1.2, 0.02, 0.5);
+  const w1 = new THREE.Mesh(wingGeo, wingMat); w1.position.set(0, 0.6, 0.6); g.add(w1);
+  const w2 = w1.clone(); w2.position.z = -0.6; g.add(w2);
+  g.userData.wings = [w1, w2];
+}
+
+// ═══════════════════════════════════════════════
+// ANIMATION LOOP (Enhanced with Idle Behaviors)
+// ═══════════════════════════════════════════════
+function loop(){
+  requestAnimationFrame(loop);
+  const t = clock.getElapsedTime();
+
+  cam.position.lerp(new THREE.Vector3(camTarget.x, camTarget.y, camTarget.z), 0.04);
+  cam.lookAt(camLook.x, camLook.y, camLook.z);
+
+  animals.forEach((a, i)=>{
+    const m = TEAM[i];
+    const ph = a.userData.phase;
+    
+    // Core Float
+    a.position.y = Math.sin(t*0.6 + ph)*0.3;
+    a.rotation.y += 0.004;
+
+    // Unique Idle Behaviors
+    if(m.id === 'dolphin') {
+      a.rotation.x = Math.sin(t*1.5)*0.1;
+      a.position.y += Math.sin(t*1.5)*0.2;
+    }
+    if(m.id === 'owl' && a.userData.head) {
+      a.userData.head.rotation.y = Math.sin(t*0.5)*0.7;
+    }
+    if(m.id === 'eagle' && a.userData.wings) {
+      a.userData.wings[0].rotation.y = Math.sin(t*2)*0.15;
+      a.userData.wings[1].rotation.y = -Math.sin(t*2)*0.15;
+    }
+    if(m.id === 'bee' && a.userData.wings) {
+      a.userData.wings[0].rotation.x = Math.sin(t*40)*0.5;
+      a.userData.wings[1].rotation.x = Math.sin(t*40)*0.5;
+    }
+    if(m.id === 'octopus' && a.userData.tentacles) {
+      a.userData.tentacles.forEach((tent, idx)=>{
+        tent.mesh.rotation.x = Math.sin(t + tent.ang)*0.1;
+        tent.mesh.scale.setScalar(1 + Math.sin(t*1.2 + idx)*0.03);
+      });
+    }
+    if(m.id === 'crow' && a.userData.head) {
+      if(Math.random() < 0.01) a.userData.head.rotation.z = (Math.random()-0.5)*0.5;
+    }
+
+    const isActive = (SLIDES[slide].t==='animal' && SLIDES[slide].i===i) || hovered===a;
+    const targetScale = isActive ? 1.35 : 1.0;
+    a.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.1);
+  });
+
+  if(particles) particles.rotation.y += 0.0005;
+  if(skybox) skybox.rotation.y += 0.0001;
+  nebulaLayers.forEach(l => l.lookAt(cam.position));
+
+  renderer.render(scene,cam);
+}
+
+// ═══════════════════════════════════════════════
+// UI & SLIDES (Unchanged logic, maintained for functionality)
+// ═══════════════════════════════════════════════
+function go(idx){ slide=Math.max(0,Math.min(SLIDES.length-1,idx)); updateSlide(); }
+function updateSlide(){
+  const sl=SLIDES[slide];
+  document.getElementById('panel').classList.remove('show');
+  document.getElementById('title-over').style.opacity = sl.t==='title' ? '1' : '0';
+  document.getElementById('slide-info').textContent = (slide+1).toString().padStart(2,'0') + ' / ' + SLIDES.length;
+  if(sl.t==='title'){ camTarget={x:0,y:1,z:22}; camLook={x:0,y:0,z:0}; }
+  else if(sl.t==='animal'){
+    const a = animals[sl.i];
+    camTarget={x:a.position.x*0.4, y:2, z:12}; camLook={x:a.position.x*0.3, y:0, z:0};
+    setTimeout(()=>showPanel(sl.i), 100);
+  }
+  else { camTarget={x:0,y:4,z:20}; camLook={x:0,y:0,z:0}; }
+  updateDots();
+}
+
+function showPanel(idx){
+  const m=TEAM[idx];
+  document.getElementById('pcontent').innerHTML = `
+    <div style="font-size:3em">${m.emoji}</div>
+    <h2>${m.name}</h2><span class="role">${m.role}</span>
+    <div class="bar"></div>
+    <span class="label">Strengths</span>
+    <div class="pills">${m.strengths.map(s=>`<span class="pill">${s}</span>`).join('')}</div>
+    <p>${m.mission}</p>`;
+  document.getElementById('panel').classList.add('show');
+}
+
+function updateDots(){
+  if(!document.getElementById('dots').children.length){
+    SLIDES.forEach((_,i)=>{
+      const d=document.createElement('div'); d.className='dot'; d.onclick=()=>go(i);
+      document.getElementById('dots').appendChild(d);
+    });
+  }
+  Array.from(document.getElementById('dots').children).forEach((d,i)=>d.classList.toggle('on', i===slide));
+}
+
+function onResize(){ cam.aspect=innerWidth/innerHeight; cam.updateProjectionMatrix(); renderer.setSize(innerWidth,innerHeight); }
+function onMove(e){
+  mouse.x=(e.clientX/innerWidth)*2-1; mouse.y=-(e.clientY/innerHeight)*2+1;
+  raycaster.setFromCamera(mouse,cam);
+  const hits=raycaster.intersectObjects(animals, true);
+  if(hits.length){
+    let o = hits[0].object; while(o.parent && !o.parent.userData.isAnimal) o=o.parent;
+    hovered=o.parent; document.body.style.cursor='pointer';
+  } else { hovered=null; document.body.style.cursor='default'; }
+}
+function onClick(){ if(hovered) go(2+hovered.userData.idx); }
+
+// Generic Building/Skybox Placeholders (Maintain Context)
+function makeSkybox(){
+  const g=new THREE.SphereGeometry(250,32,32);
+  const m=new THREE.MeshBasicMaterial({color:0x02060f, side:THREE.BackSide});
+  skybox=new THREE.Mesh(g,m); scene.add(skybox);
+}
+function makeBuilding(){ building=new THREE.Group(); scene.add(building); }
+function makeParticles(){ particles=new THREE.Group(); scene.add(particles); }
+
+document.getElementById('bnext').onclick=()=>go(slide+1);
+document.getElementById('bprev').onclick=()=>go(slide-1);
+
+init();
+go(0);
+</script>
+</body>
+</html>
+            <div class="w-10 h-10 bg-zinc-100 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-code-2">
+                    <path d="m18 16 4-4-4-4" />
+                    <path d="m6 8-4 4 4 4" />
+                    <path d="m14.5 4-5 16" />
+                </svg>
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight">Youssef Abou Eljihad</h1>
+        </div>
+    </header>
+    <main class="homework-grid">
+	        <article class="card rounded-xl overflow-hidden flex flex-col">
+	            <div class="relative aspect-video w-full bg-zinc-100 border-b border-gray-100 overflow-hidden">
+	                <img src="images/tp1.png" alt="TP1 preview" class="w-full h-full object-cover" />
+	            </div>
+            <div class="p-5 flex-grow flex flex-col">
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tight bg-zinc-100 text-zinc-600">HTML</span>
+                    <span
+                        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tight bg-zinc-100 text-zinc-600">CSS</span>
+                </div>
+                <h2 class="text-xl font-semibold mb-2">TP #01: Page de présentation personnelle </h2>
+                <p class="text-zinc-500 text-sm mb-6 flex-grow">
+                    Une page HTML5 de CV/Portfolio personnel
+                </p>
+                <div class="flex gap-2">
+                    <a href="https://c3-yo-aboueljihad.enset.ma/tp1/" target="_blank" rel="noopener noreferrer"
+                        class="btn-primary px-4 py-2 rounded-md text-sm font-medium flex-1 text-center flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/yoesefab/N7/tree/main/tp1" target="_blank" rel="noopener noreferrer"
+                        class="btn-secondary px-4 py-2 rounded-md text-sm font-medium flex-1 text-center flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        Code
+                    </a>
+                </div>
+            </div>
+        </article>
+	        <article class="card rounded-xl overflow-hidden flex flex-col">
+	            <div class="relative aspect-video w-full bg-zinc-100 border-b border-gray-100 overflow-hidden">
+	                <img src="images/tp2.png" alt="TP2 preview" class="w-full h-full object-cover" />
+	            </div>
+            <div class="p-5 flex-grow flex flex-col">
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tight bg-zinc-100 text-zinc-600">HTML
+                    </span>
+                    <span
+                        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tight bg-zinc-100 text-zinc-600">CSS</span>
+                </div>
+                <h2 class="text-xl font-semibold mb-2">TP #02: Formulaire d'inscription </h2>
+                <p class="text-zinc-500 text-sm mb-6 flex-grow">
+                    Un formulaire d'inscription avec validation HTML5
+                </p>
+                <div class="flex gap-2">
+                    <a href="https://c3-yo-aboueljihad.enset.ma/tp2/" target="_blank" rel="noopener noreferrer"
+                        class="btn-primary px-4 py-2 rounded-md text-sm font-medium flex-1 text-center flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/yoesefab/N7/tree/main/tp2" target="_blank" rel="noopener noreferrer"
+                        class="btn-secondary px-4 py-2 rounded-md text-sm font-medium flex-1 text-center flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        Code
+                    </a>
+                </div>
+            </div>
+        </article>
+	        <article class="card rounded-xl overflow-hidden flex flex-col">
+	            <div class="relative aspect-video w-full bg-zinc-100 border-b border-gray-100 overflow-hidden">
+	                <img src="images/tp3.png" alt="TP3 preview" class="w-full h-full object-cover" />
+	            </div>
+            <div class="p-5 flex-grow flex flex-col">
+                <div class="flex items-center gap-2 mb-2">
+                    <span
+                        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tight bg-zinc-100 text-zinc-600">Html</span>
+                    <span
+                        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tight bg-zinc-100 text-zinc-600">Css</span>
+                </div>
+                <h2 class="text-xl font-semibold mb-2">TP #03: Site vitrine multi-pages</h2>
+                <p class="text-zinc-500 text-sm mb-6 flex-grow">
+                    Un site web complet pour une entreprise fictive
+                </p>
+                <div class="flex gap-2">
+                    <a href="https://c3-yo-aboueljihad.enset.ma/tp3/" target="_blank" rel="noopener noreferrer"
+                        class="btn-primary px-4 py-2 rounded-md text-sm font-medium flex-1 text-center flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/yoesefab/N7/tree/main/tp3" target="_blank" rel="noopener noreferrer"
+                        class="btn-secondary px-4 py-2 rounded-md text-sm font-medium flex-1 text-center flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        Code
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 pt-8 border-t border-gray-100 text-center text-zinc-400 text-sm">
+        <p>© 2026 Yousef Abou Eljihad. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
