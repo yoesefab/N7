@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices JavaScript - Manipulation du DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .exercice {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .exercice h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .consigne {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            margin: 15px 0;
+        }
+        
+        .zone-travail {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin: 15px 0;
+            background-color: #fafafa;
+        }
+        
+        /* Styles pour les exercices */
+        .rouge { color: red; }
+        .vert { color: green; }
+        .bleu { color: blue; }
+        .fond-jaune { background-color: yellow; }
+        .grand-texte { font-size: 24px; }
+        .bordure { border: 3px solid black; }
+        .cache { display: none; }
+        .visible { display: block; }
+        
+        .boite {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .actif {
+            background-color: #4CAF50 !important;
+            color: white !important;
+        }
+        
+        .survol {
+            background-color: #ff9800;
+            transform: scale(1.1);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercices JavaScript - Manipulation du DOM</h1>
+    
+    <!-- EXERCICE 1 : Très simple - Changer le texte -->
+    <div class="exercice">
+        <h2>Exercice 1 : Changer le texte d'un élément</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer une fonction qui change le texte du paragraphe ci-dessous.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, innerText
+        </div>
+        
+        <div class="zone-travail">
+            <p id="texte1">Texte original</p>
+            <button onclick="changerTexte()">Changer le texte</button>
+        </div>
+        
+        <script>
+            function changerTexte() {
+                document.querySelector("#texte1").textContent = "Texte modifié !";
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 2 : Changer la couleur -->
+    <div class="exercice">
+        <h2>Exercice 2 : Changer la couleur d'un élément</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer une fonction qui change la couleur du titre.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, style.color
+        </div>
+        
+        <div class="zone-travail">
+            <h3 id="titre2">Je suis un titre</h3>
+            <button onclick="changerCouleur()">Rouge</button>
+            <button onclick="changerCouleurVert()">Vert</button>
+            <button onclick="changerCouleurBleu()">Bleu</button>
+        </div>
+        
+        <script>
+            function changerCouleur() {
+                document.querySelector("#titre2").style.color = "red";
+            }
+            
+            function changerCouleurVert() {
+                document.querySelector("#titre2").style.color = "green";
+            }
+            
+            function changerCouleurBleu() {
+                document.querySelector("#titre2").style.color = "blue";
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 3 : Utiliser innerHTML -->
+    <div class="exercice">
+        <h2>Exercice 3 : Ajouter du HTML</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Ajouter du contenu HTML dans un div.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, innerHTML
+        </div>
+        
+        <div class="zone-travail">
+            <div id="conteneur3"></div>
+            <button onclick="ajouterContenu()">Ajouter du contenu</button>
+            <button onclick="effacerContenu()">Effacer</button>
+        </div>
+        
+        <script>
+            function ajouterContenu() {
+                document.querySelector("#conteneur3").innerHTML = '<h4>Nouveau titre</h4><p>Nouveau paragraphe</p>';
+            }
+            
+            function effacerContenu() {
+                document.querySelector("#conteneur3").innerHTML = '';
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 4 : Utiliser classList -->
+    <div class="exercice">
+        <h2>Exercice 4 : Ajouter et enlever des classes</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Manipuler les classes CSS d'un élément.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, classList.add(), classList.remove()
+        </div>
+        
+        <div class="zone-travail">
+            <p id="paragraphe4">Je suis un paragraphe normal</p>
+            <button onclick="ajouterClasse()">Ajouter style</button>
+            <button onclick="enleverClasse()">Enlever style</button>
+            <button onclick="basculerClasse()">Basculer style</button>
+        </div>
+        
+        <script>
+            function ajouterClasse() {
+                document.querySelector("#paragraphe4").classList.add("rouge", "grand-texte");
+            }
+            
+            function enleverClasse() {
+                document.querySelector("#paragraphe4").classList.remove("rouge", "grand-texte");
+            }
+            
+            function basculerClasse() {
+                document.querySelector("#paragraphe4").classList.toggle("bordure");
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 5 : Sélectionner plusieurs éléments -->
+    <div class="exercice">
+        <h2>Exercice 5 : Modifier plusieurs éléments</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Sélectionner et modifier tous les éléments d'une classe.<br>
+            <strong>Méthodes à utiliser :</strong> querySelectorAll, boucle for
+        </div>
+        
+        <div class="zone-travail">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <button onclick="colorierTous()">Colorier tous</button>
+            <button onclick="numeroteTous()">Numéroter</button>
+        </div>
+        
+        <script>
+            function colorierTous() {
+                const items = document.querySelectorAll('.zone-travail .item');
+                items.forEach(item => {
+                    item.style.color = 'red' ; 
+                }); 
+            }
+            
+            function numeroteTous() {
+                var counter = 1 ; 
+                const items = document.querySelectorAll('.zone-travail .item');
+                items.forEach(item => {
+                    item.textContent = counter +  '. Item'  ; 
+                    counter++;
+                }); 
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 6 : Interactions plus complexes -->
+    <div class="exercice">
+        <h2>Exercice 6 : Créer un sélecteur de couleur</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer des boîtes colorées qui changent le fond de la page.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, querySelectorAll, style, classList
+        </div>
+        
+        <div class="zone-travail">
+            <div class="boite" style="background-color: red;" onclick="changerFond('red')"></div>
+            <div class="boite" style="background-color: green;" onclick="changerFond('green')"></div>
+            <div class="boite" style="background-color: blue;" onclick="changerFond('blue')"></div>
+            <div class="boite" style="background-color: yellow;" onclick="changerFond('yellow')"></div>
+            <button onclick="reinitialiserFond()">Réinitialiser</button>
+        </div>
+        
+        <script>
+            function changerFond(couleur) {
+                document.querySelector('body').style.backgroundColor = couleur ; 
+            }
+            
+            function reinitialiserFond() {
+                document.querySelector('body').style.backgroundColor = '#f5f5f5'
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 7 : Formulaire dynamique -->
+    <div class="exercice">
+        <h2>Exercice 7 : Formulaire dynamique</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer un formulaire qui affiche les valeurs en temps réel.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, value, innerText
+        </div>
+        
+        <div class="zone-travail">
+            <input type="text" id="nom" placeholder="Votre nom" onkeyup="afficherNom()">
+            <select id="couleur" onchange="appliquerCouleur()">
+                <option value="">Choisir une couleur</option>
+                <option value="red">Rouge</option>
+                <option value="green">Vert</option>
+                <option value="blue">Bleu</option>
+            </select>
+            <p id="affichage7">Votre nom apparaîtra ici</p>
+        </div>
+        
+        <script>
+            function afficherNom() {
+                const nom = document.querySelector("#nom").value;
+                document.querySelector("#affichage7").innerText = nom ? "Bonjour " + nom + " !" : "Votre nom apparaîtra ici";
+            }
+            
+            function appliquerCouleur() {
+                const couleur = document.querySelector("#couleur").value;
+                document.querySelector("#affichage7").style.color = couleur;
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 8 : Liste TODO simple -->
+    <div class="exercice">
+        <h2>Exercice 8 : Liste TODO</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer une liste TODO simple.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, innerHTML, value
+        </div>
+        
+        <div class="zone-travail">
+            <input type="text" id="tache" placeholder="Nouvelle tâche">
+            <button onclick="ajouterTache()">Ajouter</button>
+            <button onclick="effacerTout()">Tout effacer</button>
+            <ul id="listeTaches"></ul>
+        </div>
+        
+        <script>
+            function ajouterTache() {
+                const tacheInput = document.querySelector("#tache");
+                const tache = tacheInput.value;
+                if (tache.trim() !== "") {
+                    const li = document.createElement("li");
+                    li.innerHTML = tache + ' <button onclick="supprimerTache(this)">X</button>';
+                    document.querySelector("#listeTaches").appendChild(li);
+                    tacheInput.value = "";
+                }
+            }
+            
+            function supprimerTache(bouton) {
+                bouton.parentElement.remove();
+            }
+            
+            function effacerTout() {
+                document.querySelector("#listeTaches").innerHTML = "";
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 9 : Compteur avec style -->
+    <div class="exercice">
+        <h2>Exercice 9 : Compteur avec conditions</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer un compteur qui change de style selon la valeur.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, innerText, classList, conditions
+        </div>
+        
+        <div class="zone-travail">
+            <h3 id="compteur">0</h3>
+            <button onclick="incrementer()">+1</button>
+            <button onclick="decrementer()">-1</button>
+            <button onclick="reinitialiser()">Reset</button>
+            <p>Rouge si négatif, vert si positif, noir si zéro</p>
+        </div>
+        
+        <script>
+            function incrementer() {
+                const compteur = document.querySelector("#compteur");
+                const valeur = parseInt(compteur.innerText) + 1;
+                compteur.innerText = valeur;
+                ajusterCouleur(valeur);
+            }
+            
+            function decrementer() {
+                const compteur = document.querySelector("#compteur");
+                const valeur = parseInt(compteur.innerText) - 1;
+                compteur.innerText = valeur;
+                ajusterCouleur(valeur);
+            }
+            
+            function reinitialiser() {
+                document.querySelector("#compteur").innerText = "0";
+                ajusterCouleur(0);
+            }
+            
+            function ajusterCouleur(valeur) {
+                const compteur = document.querySelector("#compteur");
+                if (valeur < 0) {
+                    compteur.style.color = "red";
+                } else if (valeur > 0) {
+                    compteur.style.color = "green";
+                } else {
+                    compteur.style.color = "black";
+                }
+            }
+        </script>
+    </div>
+    
+    <!-- EXERCICE 10 : Mini-jeu de mémoire -->
+    <div class="exercice">
+        <h2>Exercice 10 : Afficher/Masquer des éléments</h2>
+        <div class="consigne">
+            <strong>Objectif :</strong> Créer un système d'onglets simple.<br>
+            <strong>Méthodes à utiliser :</strong> querySelector, querySelectorAll, classList
+        </div>
+        
+        <div class="zone-travail">
+            <button onclick="afficherOnglet(1)" class="onglet actif">Onglet 1</button>
+            <button onclick="afficherOnglet(2)" class="onglet">Onglet 2</button>
+            <button onclick="afficherOnglet(3)" class="onglet">Onglet 3</button>
+            
+            <div id="contenu1" class="contenu-onglet visible">
+                <h4>Contenu de l'onglet 1</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div id="contenu2" class="contenu-onglet cache">
+                <h4>Contenu de l'onglet 2</h4>
+                <p>Consectetur adipiscing elit.</p>
+            </div>
+            <div id="contenu3" class="contenu-onglet cache">
+                <h4>Contenu de l'onglet 3</h4>
+                <p>Sed do eiusmod tempor.</p>
+            </div>
+        </div>
+        
+        <script>
+            function afficherOnglet(numero) {
+                // Cacher tous les contenus
+                const contenus = document.querySelectorAll(".contenu-onglet");
+                contenus.forEach(contenu => {
+                    contenu.classList.remove("visible");
+                    contenu.classList.add("cache");
+                });
+                
+                // Afficher le contenu sélectionné
+                document.querySelector("#contenu" + numero).classList.remove("cache");
+                document.querySelector("#contenu" + numero).classList.add("visible");
+                
+                // Enlever la classe "actif" de tous les boutons
+                const boutons = document.querySelectorAll(".onglet");
+                boutons.forEach(bouton => {
+                    bouton.classList.remove("actif");
+                });
+                
+                // Ajouter la classe "actif" au bouton cliqué
+                event.target.classList.add("actif");
+            }
+        </script>
+        </script>
+    </div>
+   
+</body>
+</html>

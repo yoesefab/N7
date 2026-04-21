@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tp 6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="canvas">
+        <section class="container">
+            <div class="top-row">
+                <select name="method" id="method" class="sketch-field method-field">
+                    <option value="" selected disabled>Method</option>
+                    <option value="get">Get</option>
+                    <option value="post">Post</option>
+                    <option value="put">Put</option>
+                    <option value="patch">Patch</option>
+                </select>
+                <input type="text" name="url" id="url" class="sketch-field" placeholder="URL">
+                <button type="button" class="sketch-button" id="envoyer-btn">Envoyer</button>
+            </div>
+
+            <div class="header-row">
+                <input type="text" id="header-key" class="sketch-field" placeholder="Header key">
+                <input type="text" id="header-value" class="sketch-field" placeholder="Header value">
+                <button type="button" class="sketch-button icon-button" id="add-btn">+</button>
+            </div>
+
+            <section class="box body-box">
+                <label for="request-body">Body</label>
+                <textarea id="request-body"></textarea>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="box response-box">
+                <p class="box-title">Response body</p>
+                <pre class="response-output"></pre>
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
